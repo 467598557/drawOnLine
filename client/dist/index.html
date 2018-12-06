@@ -9,43 +9,49 @@
     <canvas id="canvas">
     </canvas>
     <div id="tool">
-        <p class="title">操作类型</p>
-        <ul class="operate-list" >
-            <li data-type="draw" class="active" title="绘制">绘</li>
-            <li data-type="eraser" title="擦除">擦</li>
-            <li data-type="move" title="移除">移</li>
+        <ul class="menu-list">
+            <li data-type="draw" class="active"><a href="javascript:void(0)">画笔</a></li>
+            <li data-type="eraser"><a href="javascript:void(0)">橡皮</a></li>
+            <li ><a href="javascript:void(0)">撤销</a></li>
+            <li ><a href="javascript:void(0)">恢复</a></li>
         </ul>
-        <p class="title">选择颜色</p>
-        <ul class="color-list">
-            <li data-color="#000" class="active"></li>
-            <li data-color="red"></li>
-            <li data-color="blue"></li>
-            <li data-color="green"></li>
-            <li data-color="yellow"></li>
-        </ul>
-        <p class="title">线条宽度</p>
-        <ul class="line-list">
-            <li data-line="2" class="active"></li>
-            <li data-line="4"></li>
-            <li data-line="6"></li>
-            <li data-line="8"></li>
-            <li data-line="10"></li>
-        </ul>
-        <p class="title">橡皮大小</p>
-        <ul class="eraser-size-list">
-            <li data-size="6"></li>
-            <li data-size="12"></li>
-            <li data-size="18"></li>
-            <li data-size="24" class="active"></li>
-            <li data-size="30"></li>
-            <li data-size="36"></li>
-        </ul>
-        <p class="title">缩放倍数</p>
-        <ul class="scale-list">
-            <li data-scale="1" class="active">1</li>
-            <li data-scale="2">2</li>
-            <li data-scale="4">4</li>
-        </ul>
+        <div id="drawConfig">
+            <p class="title">粗细</p>
+            <ul class="line-list">
+                <li data-line="6" class="active"></li>
+                <li data-line="10"></li>
+                <li data-line="14"></li>
+            </ul>
+            <p class="title">颜色</p>
+            <ul class="color-list">
+                <li data-color="#000" class="active"></li>
+                <li data-color="red"></li>
+                <li data-color="blue"></li>
+                <li data-color="green"></li>
+                <li data-color="orange"></li>
+            </ul>
+            <p class="title">缩放</p>
+            <ul class="scale-list">
+                <li data-scale="1" class="active">1</li>
+                <li data-scale="2">2</li>
+                <li data-scale="4">4</li>
+            </ul>
+        </div>
+        <!--<p class="title">操作类型</p>-->
+        <!--<ul class="operate-list" >-->
+            <!--<li data-type="draw" class="active" title="绘制">绘</li>-->
+            <!--<li data-type="eraser" title="擦除">擦</li>-->
+            <!--<li data-type="move" title="移除">移</li>-->
+        <!--</ul>-->
+        <!--<p class="title">橡皮大小</p>-->
+        <!--<ul class="eraser-size-list">-->
+            <!--<li data-size="6"></li>-->
+            <!--<li data-size="12"></li>-->
+            <!--<li data-size="18"></li>-->
+            <!--<li data-size="24" class="active"></li>-->
+            <!--<li data-size="30"></li>-->
+            <!--<li data-size="36"></li>-->
+        <!--</ul>-->
     </div>
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js" ></script>
     <script src="./bundle.js"></script>

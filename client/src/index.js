@@ -7,8 +7,8 @@ let cache = {
     ctxHeight: window.innerHeight,
     fillStyle: "#fff",
     strokeStyle: "#000",
-    lineWidth: 2,
-    eraserSize: 24
+    lineWidth: 6,
+    eraserSize: 30
 };
 let isMobile = (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i));
 let ctxScale = 1;
@@ -21,6 +21,7 @@ let util = {
         ctx.fillRect(0, 0, cache.ctxWidth, cache.ctxHeight);
     }
 };
+let $drawConfig = $("#drawConfig");
 canvas.width = cache.ctxWidth;
 canvas.height = cache.ctxHeight;
 //背景色
@@ -126,7 +127,12 @@ $(".scale-list").on("click", "li", function() {
 
     canvas.style.webkitTransform = createCtxTransformStyleText();
 });
-$(".operate-list").on("click", "li", function() {
+$(".menu-list").on("click", "li", function() {
     $(this).addClass("active").siblings().removeClass("active");
     operateType = this.getAttribute("data-type");
+    if(operateType == "draw") {
+        $drawConfig.show();
+    } else {
+        $drawConfig.hide();
+    }
 });
