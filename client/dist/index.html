@@ -9,12 +9,12 @@
     <canvas id="canvas">
     </canvas>
     <div id="tool">
-        <p class="title">选择功能</p>
-        <select id="operateType">
-            <option value="draw">绘制</option>
-            <option value="eraser">擦除</option>
-            <option value="move">移动</option>
-        </select>
+        <p class="title">操作类型</p>
+        <ul class="operate-list" >
+            <li data-type="draw" class="active" title="绘制">绘</li>
+            <li data-type="eraser" title="擦除">擦</li>
+            <li data-type="move" title="移除">移</li>
+        </ul>
         <p class="title">选择颜色</p>
         <ul class="color-list">
             <li data-color="#000" class="active"></li>

@@ -4,23 +4,26 @@
     width: 150px;
     background: rgba(0, 0, 0, 0.3);
     position: fixed;
-    right: 50px;
-    top: 20px;
+    right: 0px;
+    top: 0px;
     min-height: 50px;
+    max-height: 100%;
     border-radius: 8px;
     overflow: hidden;
+    overflow-y: auto;
     padding-bottom: 10px;
     .title {
         color: #fff;
         line-height: 35px;
         border-bottom: 1px solid #F2F2F2;
-        text-indent: 20px;
+        text-indent: 10px;
+        font-size: 12px;
     }
     ul {
         overflow: hidden;
         border-bottom: 1px solid #F2F2F2;
     }
-    .color-list {
+    .color-list, .operate-list {
         li {
             width: 30px;
             height: 30px;
@@ -46,6 +49,10 @@
                 border-color: darkorchid;
             }
         }
+    }
+    .operate-list {
+        line-height: 22px;
+        text-align: center;
     }
     .line-list {
         li {
